@@ -41,26 +41,44 @@ body{ font: 16px/1.25 var(--ff);}
 .col-10{grid-column: span 10;}
 .col-11{grid-column: span 11;}
 .col-12{grid-column: span 12;}
+.gap-y-2{ row-gap: 4rem; }
 .flex{ display: flex;}
 .justify-space-bet{ justify-content: space-between;}
 .align-center{ align-items: center;}
 
+
 /* custom */
-header{ background: #000; color: #fff;}
+header{ background: #000; color: #fff; position: sticky; top: 0; }
 h1{ font-size: 2rem;}
 h1 a{ color: inherit; display: inline-block; line-height: 80px;}
-nav{}
-nav ul{}
+nav{ margin-left: -20px;}
 nav li{ margin: 0 5px;}
 nav a{ color: inherit; line-height: 80px; display: block; padding: 0 15px;}
 .btn{ color: var(--red); font: 16px var(--ff); background: none; border: 2px solid; width: 90px; height: 35px; border-radius: 10px;}
+.menu{ display: none; transform: translateY(-50%);}
+.menu span{ display: block; height: 2px; background: var(--red); margin: 5px 10px;}
+
+/* input[type="checkbox"] ~ .collapse{ display: none;}
+input[type="checkbox"]:checked ~ .collapse{ display: block;} */
 
 
+.banner{ background: #666; color: #fff; padding: 20rem 0;}
+.banner p{ font: 100 60px var(--ff);}
+.banner a{ color: var(--red);}
+.banner button{ background: none; border: none; color: inherit; font-size: 10rem; margin-right: 40px;}
+
+
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0; }
+h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
+.circle{ width: 100px; flex-shrink: 0; aspect-ratio: 1/1; border: 2px solid; border-radius: 50%; display: grid; place-items: center; font-size: 36px; margin-right: 2rem; }
+.wrap-3 h3{ font-size: 16px; line-height: 30px; margin-bottom: 6px; }
+.wrap-3 p{ font: 100 14px var(--ff); line-height: 1.57; }
 
 
 /* responsive */
 @media screen and (max-width:1220px){
     html{ font-size: 13px;}
+    h2{font-size: 62px;}
 }
 @media screen and (max-width:980px){
     .col-t-1{grid-column: span 1;}
@@ -74,10 +92,15 @@ nav a{ color: inherit; line-height: 80px; display: block; padding: 0 15px;}
     .col-t-9{grid-column: span 9;}
     .col-t-10{grid-column: span 10;}
     .col-t-11{grid-column: span 11;}
-    .col-t-12{grid-column: span 12;}   
+    .col-t-12{grid-column: span 12;}  
+     .banner p{ font-size: 36px;}
 }
 @media screen and (max-width:767px){
     html{ font-size: 12px;}
+    .col-m-6{grid-column: span 6;}
+    .collapse{display: none;}
+    .menu{ display: inline-block; position: absolute; right: 1rem; top: 50%;}
+    h2{font-size: 60px;}
 }
 @media screen and (max-width:460px){
     .col-p-1{grid-column: span 1;}
@@ -92,4 +115,5 @@ nav a{ color: inherit; line-height: 80px; display: block; padding: 0 15px;}
     .col-p-10{grid-column: span 10;}
     .col-p-11{grid-column: span 11;}
     .col-p-12{grid-column: span 12;}
+    .banner .flex{ flex-flow: column; }
 }
