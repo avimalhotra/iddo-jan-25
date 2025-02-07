@@ -4,6 +4,7 @@ button{ cursor: pointer; padding: 0;}
 :disabled{ cursor: not-allowed;}
 img{ vertical-align: bottom;}
 ul{ list-style: none; padding: 0;}
+.img-resp{ max-width: 100%; height: auto; }
 
 @font-face {
     font-family: proxima;
@@ -44,11 +45,12 @@ body{ font: 16px/1.25 var(--ff);}
 .gap-y-2{ row-gap: 4rem; }
 .flex{ display: flex;}
 .justify-space-bet{ justify-content: space-between;}
+.justify-center{ justify-content: center;}
 .align-center{ align-items: center;}
 
 
 /* custom */
-header{ background: #000; color: #fff; position: sticky; top: 0; }
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 1; }
 h1{ font-size: 2rem;}
 h1 a{ color: inherit; display: inline-block; line-height: 80px;}
 nav{ margin-left: -20px;}
@@ -75,6 +77,51 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .wrap-3 p{ font: 100 14px var(--ff); line-height: 1.57; }
 
 
+.wrap-4{ background: #fff; color: var(--red); font-size: 36px; text-align: center; line-height: 10rem;}
+
+
+.wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0 140px;}
+.wrap-5 .btn{ margin: 2rem 10px 4rem 0; }
+.wrap-5 .active{ background: var(--red); color: #fff; border-color: var(--red); }
+.work{ position: relative; overflow: hidden; }
+.work .details{ position: absolute; inset: auto 0 -50px 0; background: #fff; text-align: center; padding: 20px 0; transition: .5s; opacity: 0; }
+.work .details h3{ color: var(--red); font-size: 18px; line-height: 40px; }
+.work .details p{ color: #898989; font: 100 14px var(--ff);  line-height: 20px;}
+.work:hover .details{ opacity: 1; bottom: 0;}
+.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: none; border: none;}
+
+
+.wrap-6{ background: #666; color: #fff; padding: 4rem 0 2rem; }
+.reviews{ text-align: center;}
+.review{ display: none;}
+.review.active{ display: block;}
+.review blockquote p{ font: 100 36px/41px var(--ff);}
+.review img{ margin-top: 10px;}
+.review figcaption{ margin: 10px 0 2rem; font-weight: bold;}
+.pager li{ margin: 0 5px;}
+.pager a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%;}
+.pager a.active{ background: #fff;}
+
+
+
+
+.wrap-7{ background: #fff; color: #363636; padding: 100px 0 140px;}
+.team{ margin: 80px 0 40px; position: relative;}
+.gap{ margin: 50px 0 0 100px;}
+.gap h3{ color: var(--red); font-size: 18px; margin-bottom: 10px; }
+.gap small{ color: #898989; font: 100 14px var(--ff); }
+.gap p{ color: #363636; font: 100 14px/22px var(--ff); margin-top: 2rem; }
+.social{ position: absolute; left: 140px; top: 60px; }
+.social li{ margin-right: 10px; }
+.social a{ display: block; width: 50px; line-height: 50px; background: var(--red); color: #fff; border-radius: 50%; text-align: center; font-size: 24px; }
+
+
+.wrap-8{ background: #666; color: #fff; text-align: center; padding: 85px 0 75px;}
+.wrap-8 span{ font-size: 72px;}
+.wrap-8 p{ font: 100 72px var(--ff);}
+.wrap-8 b{ font: bold 18px var(--ff);}
+
+
 /* responsive */
 @media screen and (max-width:1220px){
     html{ font-size: 13px;}
@@ -93,27 +140,21 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     .col-t-10{grid-column: span 10;}
     .col-t-11{grid-column: span 11;}
     .col-t-12{grid-column: span 12;}  
-     .banner p{ font-size: 36px;}
+    .banner p{ font-size: 36px;}
+    .gap{ margin-left: 50px;}
 }
 @media screen and (max-width:767px){
     html{ font-size: 12px;}
     .col-m-6{grid-column: span 6;}
+    .col-m-12{grid-column: span 12;}
     .collapse{display: none;}
     .menu{ display: inline-block; position: absolute; right: 1rem; top: 50%;}
     h2{font-size: 60px;}
 }
 @media screen and (max-width:460px){
-    .col-p-1{grid-column: span 1;}
-    .col-p-2{grid-column: span 2;}
-    .col-p-3{grid-column: span 3;}
     .col-p-4{grid-column: span 4;}
-    .col-p-5{grid-column: span 5;}
     .col-p-6{grid-column: span 6;}
-    .col-p-7{grid-column: span 7;}
-    .col-p-8{grid-column: span 8;}
-    .col-p-9{grid-column: span 9;}
-    .col-p-10{grid-column: span 10;}
-    .col-p-11{grid-column: span 11;}
     .col-p-12{grid-column: span 12;}
     .banner .flex{ flex-flow: column; }
+    .wrap-8 p{ font-size: 62px;}
 }
