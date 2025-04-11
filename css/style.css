@@ -59,10 +59,10 @@ nav li{ margin: 0 5px;}
 nav a{ color: inherit; line-height: 80px; display: block; padding: 0 15px;}
 .btn{ color: var(--red); font: 16px var(--ff); background: none; border: 2px solid; width: 90px; height: 35px; border-radius: 10px;}
 .menu{ display: none; transform: translateY(-50%);}
-.menu span{ display: block; height: 2px; background: var(--red); margin: 5px 10px;}
-
-/* input[type="checkbox"] ~ .collapse{ display: none;}
-input[type="checkbox"]:checked ~ .collapse{ display: block;} */
+.menu span{ display: block; height: 2px; background: var(--red); margin: 5px 10px; transition: 400ms; transform-origin: right center; }
+.menu.active span:nth-child(1){ transform: rotate(-12deg);}
+.menu.active span:nth-child(2){ opacity: 0;}
+.menu.active span:nth-child(3){  transform: rotate(12deg);}
 
 
 .banner{ background: #666; color: #fff; padding: 20rem 0;}
@@ -89,7 +89,8 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .work .details h3{ color: var(--red); font-size: 18px; line-height: 40px; }
 .work .details p{ color: #898989; font: 100 14px var(--ff);  line-height: 20px;}
 .work:hover .details{ opacity: 1; bottom: 0;}
-.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: none; border: none;}
+button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: none; border: none;}
+.wrap-5 .all:nth-child(7),.all:nth-child(8),.all:nth-child(9){ display: none;}
 
 
 .wrap-6{ background: #666; color: #fff; padding: 4rem 0 2rem; }
@@ -115,6 +116,7 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .social{ position: absolute; left: 140px; top: 60px; }
 .social li{ margin-right: 10px; }
 .social a{ display: block; width: 50px; line-height: 50px; background: var(--red); color: #fff; border-radius: 50%; text-align: center; font-size: 24px; }
+.wrap-7 .all:nth-child(4),.wrap-7 .all:nth-child(5),.wrap-7 .all:nth-child(6){ display: none;}
 
 
 .wrap-8{ background: #666; color: #fff; text-align: center; padding: 85px 0 75px;}
@@ -133,8 +135,8 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 .accordion li{ margin-bottom: 10px;}
 .accordion a{ display: block; color: #898989; border: 1px solid #3b3b3b; padding: 12px; border-radius: 10px; font: 700 14px var(--ff);}
 .accordion a span{ margin-right: 25px;}
-.accordion p{ display: none;}
-.accordion li:first-child p{ display: block; font: 100 14px/22px var(--ff); margin: 20px;}
+.accordion p{ display: none; font: 100 14px/22px var(--ff); margin: 20px;}
+.accordion li:first-child p{ display: block; }
 .accordion a.active{ color: var(--red);}
 .accordion a::after{ content: '+'; float: right; }
 .accordion a.active::after{ content: '—';}
@@ -192,9 +194,12 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
     html{ font-size: 12px;}
     .col-m-6{grid-column: span 6;}
     .col-m-12{grid-column: span 12;}
-    .collapse{display: none;}
     .menu{ display: inline-block; position: absolute; right: 1rem; top: 50%;}
     h2{font-size: 60px;}
+    .collapse{display: none; padding: 1rem; background: #000; position: absolute; left: 0; right: 0; top: 80px;}
+    .collapse .flex{ flex-flow: column;}
+    .collapse nav{ width: 100%; margin-left: 0;}
+    nav a{ line-height: 40px; text-align: right;}
 }
 @media screen and (max-width:460px){
     .col-p-4{grid-column: span 4;}
