@@ -8,6 +8,7 @@
     <meta name="description" content="IDDO Single Page Website">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
 </head>
 <body id="home">
     <header>
@@ -208,7 +209,7 @@
                 <div class="col-2"></div>
                 <div class="col-8 col-t-12">
                     <div class="reviews">
-                        <div class="review active">
+                        <div class="review">
                             <blockquote><p><q>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptatem quia iste repellat, harum consequatur!</q></p>
                             <figure>
                                 <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
@@ -216,14 +217,28 @@
                             </figure>
                             </blockquote>
                         </div>
-                        <div class="review">2</div>
-                        <div class="review">3</div>
+                        <div class="review">
+                            <blockquote><p><q>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptatem quia iste repellat, harum consequatur!</q></p>
+                            <figure>
+                                <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
+                                <figcaption>JACK EFRON</figcaption>
+                            </figure>
+                            </blockquote>
+                        </div>
+                        <div class="review">
+                            <blockquote><p><q>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptatem quia iste repellat, harum consequatur!</q></p>
+                            <figure>
+                                <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
+                                <figcaption>JACK EFRON</figcaption>
+                            </figure>
+                            </blockquote>
+                        </div>
                     </div>
-                    <ul class="pager flex justify-center">
+                    <!-- <ul class="pager flex justify-center">
                         <li><a class="active" href=""></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-2"></div>
             </div>
@@ -476,72 +491,22 @@
         <div class="container">
             <h3>IDDO</h3>
             <p>&copy; 2014</p>
+            <button><span class="fa fa-chevron-up"></span></button>
         </div>
     </footer>
+    
+    <div class="hiddenform">
+        <button aria-label="Close Model" class="close"><span class="fa fa-times"></span></button>
+        <form method="post">
+            <label> Name : <input type="text" required> </label>
+            <label> Email : <input type="email" required> </label>
+            <label> Password : <input type="password" required> </label>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    
-<script>"use strict";
-$(function(){
-
-    $(".wrap-5 .btn").click(function(){ 
-        $(".wrap-5 .btn").removeClass("active");
-        $(this).addClass("active");
-
-        if( $(this).text()=="All" ){
-            $(".wrap-5 .all").fadeIn();  
-        }
-        else if( $(this).text()=="Website" ){
-            $(".wrap-5 .all").fadeOut(0);  
-            $(".wrap-5 .website").fadeIn();  
-        }
-        else{ 
-            $(".wrap-5 .all").fadeOut(0);  
-            $(".wrap-5 .brand").fadeIn();  
-        }
-    });
-
-    $(".wrap-5 .more").click(function(){
-        $(this).toggleClass("fa-minus-circle")
-        $(".wrap-5 .all:nth-child(7),.wrap-5 .all:nth-child(8),.wrap-5 .all:nth-child(9)").slideToggle();
-    });
-
-    $(".wrap-7 .more").click(function(){
-        $(this).toggleClass("fa-minus-circle")
-        $(".wrap-7 .all:nth-child(4),.wrap-7 .all:nth-child(5),.wrap-7 .all:nth-child(6)").slideToggle();
-    });
-
-
-    $(".accordion a").click(function(e){
-        e.preventDefault();
-
-        if( $(this).hasClass("active") ){
-            $(this).removeClass("active");
-            $(this).next("p").slideUp();
-        }
-        else{
-            $(".accordion a").removeClass("active");
-            $(".accordion p").slideUp();
-
-            $(this).addClass("active");
-            $(this).next("p").slideDown();
-        }
-
-    });
-
-
-    $("header .menu").click(function(){
-        $(this).toggleClass("active");
-        $(".collapse").slideToggle();
-    });
-
-    if(screen.width<768){
-        $("nav a").click(function(){ 
-            $(".collapse").slideUp();
-            $(".menu").removeClass("active");
-         })
-       
-    }
-
-});  
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

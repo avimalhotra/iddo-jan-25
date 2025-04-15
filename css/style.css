@@ -5,7 +5,8 @@ button{ cursor: pointer; padding: 0;}
 img{ vertical-align: bottom;}
 ul{ list-style: none; padding: 0;}
 .img-resp{ width: 100%; height: auto; }
-label{ display: block; }
+label{ display: block;}
+iframe{ border: none; vertical-align: bottom;}
 
 @font-face {
     font-family: proxima;
@@ -95,14 +96,12 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
 
 .wrap-6{ background: #666; color: #fff; padding: 4rem 0 2rem; }
 .reviews{ text-align: center;}
-.review{ display: none;}
-.review.active{ display: block;}
 .review blockquote p{ font: 100 36px/41px var(--ff);}
-.review img{ margin-top: 10px;}
+.review img{ margin: 10px auto;}
 .review figcaption{ margin: 10px 0 2rem; font-weight: bold;}
-.pager li{ margin: 0 5px;}
-.pager a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%;}
-.pager a.active{ background: #fff;}
+.wrap-6 .bx-wrapper{background: none; border: none; box-shadow:  0 0;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:focus,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff; }
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
 
 
 
@@ -166,7 +165,15 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
 .wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;}
 
 .wrap-13{ background: #363636; color: #fff; padding: 50px 0px; text-align: center;}
+.wrap-13 button{ color: var(--red); font-size: 24px; border: none; background: none;}
 
+.hiddenform{ display: none;}
+.overlay{ background: #000b; position: fixed; inset: 0; z-index: 2;}
+.popover{ background: #fff; position: fixed; left: 50%; top: 100px; padding: 1rem; border-radius: 5px;  z-index: 2; transform: translateX(-50%);}
+.popover input{ float: right; margin-left: 1rem; height: 35px; padding: 5px; border: 1px solid #888; border-radius: 10px; }
+.popover label{ clear: both; margin: 2rem 0;}
+.popover form button{display: block; margin: auto;}
+.popover .close{ position: absolute; right: 5px; top: 5px; border: none; color: var(--red); }
 
 
 /* responsive */
@@ -209,4 +216,5 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
     .wrap-8 p{ font-size: 62px;}
     .wrap-10 input{ width: 240px; font-size: 24px;}
     .brands{ grid-template-columns: repeat( 1, 1fr); }
+    .popover iframe{ width: 330px; height: auto;}
 }
