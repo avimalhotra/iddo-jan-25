@@ -59,6 +59,7 @@ nav{ margin-left: -20px;}
 nav li{ margin: 0 5px;}
 nav a{ color: inherit; line-height: 80px; display: block; padding: 0 15px;}
 .btn{ color: var(--red); font: 16px var(--ff); background: none; border: 2px solid; width: 90px; height: 35px; border-radius: 10px;}
+header .btn{ color: #dc5f5f;}
 .menu{ display: none; transform: translateY(-50%);}
 .menu span{ display: block; height: 2px; background: var(--red); margin: 5px 10px; transition: 400ms; transform-origin: right center; }
 .menu.active span:nth-child(1){ transform: rotate(-12deg);}
@@ -68,7 +69,7 @@ nav a{ color: inherit; line-height: 80px; display: block; padding: 0 15px;}
 
 .banner{ background: #666; color: #fff; padding: 20rem 0;}
 .banner p{ font: 100 60px var(--ff);}
-.banner a{ color: var(--red);}
+.banner a{ color: #fff; }
 .banner button{ background: none; border: none; color: inherit; font-size: 10rem; margin-right: 40px;}
 
 
@@ -83,12 +84,12 @@ h2{ font-size: 72px; line-height: 60px; border-bottom: 10px solid;}
 
 
 .wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0 140px;}
-.wrap-5 .btn{ margin: 2rem 10px 4rem 0; }
+.wrap-5 .btn{ margin: 2rem 10px 4rem 0; color: #a32f2f; }
 .wrap-5 .active{ background: var(--red); color: #fff; border-color: var(--red); }
 .work{ position: relative; overflow: hidden; }
 .work .details{ position: absolute; inset: auto 0 -50px 0; background: #fff; text-align: center; padding: 20px 0; transition: .5s; opacity: 0; }
 .work .details h3{ color: var(--red); font-size: 18px; line-height: 40px; }
-.work .details p{ color: #898989; font: 100 14px var(--ff);  line-height: 20px;}
+.work .details p{ color: #666; font: 100 14px var(--ff);  line-height: 20px;}
 .work:hover .details{ opacity: 1; bottom: 0;}
 button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: none; border: none;}
 .wrap-5 .all:nth-child(7),.all:nth-child(8),.all:nth-child(9){ display: none;}
@@ -101,7 +102,7 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
 .review figcaption{ margin: 10px 0 2rem; font-weight: bold;}
 .wrap-6 .bx-wrapper{background: none; border: none; box-shadow:  0 0;}
 .wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:focus,.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff; }
-.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff; margin: 10px;}
 
 
 
@@ -110,7 +111,7 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
 .team{ margin: 80px 0 40px; position: relative;}
 .gap{ margin: 50px 0 0 100px;}
 .gap h3{ color: var(--red); font-size: 18px; margin-bottom: 10px; }
-.gap small{ color: #898989; font: 100 14px var(--ff); }
+.gap small{ color: #666; font: 100 14px var(--ff); }
 .gap p{ color: #363636; font: 100 14px/22px var(--ff); margin-top: 2rem; }
 .social{ position: absolute; left: 140px; top: 60px; }
 .social li{ margin-right: 10px; }
@@ -132,7 +133,7 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
 .d25{ background: conic-gradient(var(--red) 90deg,#fff 90deg);}
 .accordion{ margin-top: 80px; }
 .accordion li{ margin-bottom: 10px;}
-.accordion a{ display: block; color: #898989; border: 1px solid #3b3b3b; padding: 12px; border-radius: 10px; font: 700 14px var(--ff);}
+.accordion a{ display: block; color: #666; border: 1px solid #3b3b3b; padding: 12px; border-radius: 10px; font: 700 14px var(--ff);}
 .accordion a span{ margin-right: 25px;}
 .accordion p{ display: none; font: 100 14px/22px var(--ff); margin: 20px;}
 .accordion li:first-child p{ display: block; }
@@ -148,12 +149,12 @@ button.more{ margin-top: 2rem; font-size: 24px; color: var(--red); background: n
 
 .wrap-11{ background: #7f7f7f; color: #fff; padding: 28px 0 27px;}
 .brands{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; }
-.brand{ background: #a6a6a6; line-height: 95px; text-align: center; }
+.brand{ background: #666; line-height: 95px; text-align: center; }
 
 
 
 .wrap-12{ background: #ebebeb; color: #363636; padding: 100px 0 140px;}
-.wrap-12 address{ font: normal 400 16px/30px var(--ff); margin: 1rem 0; color: #898989;}
+.wrap-12 address{ font: normal 400 16px/30px var(--ff); margin: 1rem 0; color: #666;}
 .social2{ margin-top: 1rem; }
 .social2 li{ margin-right: 10px; }
 .social2 a{ color: var(--red);}
